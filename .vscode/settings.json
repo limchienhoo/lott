@@ -1,0 +1,13 @@
+    {
+    "files.autoSave": "afterDelay",
+    "python.pythonPath": "/home/lim/env/bin/python3",
+    "python.formatting.provider": "yapf",
+    "workbench.iconTheme": "vscode-icons",
+    "python.formatting.autopep8Path": "autopep8",
+    "workbench.colorTheme": "One Dark Pro",
+    "editor.fontSize": 16,
+    "python.linting.pylintArgs": [
+        "--load-plugins",
+        "pylint_django",
+    ]           
+}
