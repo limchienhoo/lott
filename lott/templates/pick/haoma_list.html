@@ -1,0 +1,43 @@
+
+
+<ul>
+        {% for zodiac,haomas in haoma_dict.items %}
+       <li> 
+
+      {% if zodiac.be_pick == True %}
+                {{zodiac}}  
+                {% else %}
+             <font color="#999999">{{zodiac}}</font>  
+                {% endif %}
+        
+                {% for haoma in haomas %}
+    {% if haoma.be_pick == True %}
+                 {{haoma}}    
+         {% else %}
+             <font color="#999999">{{haoma}}</font>  
+                {% endif %}
+        {% endfor %}
+                </li>
+                {% endfor %}
+</ul>
+
+
+<!-- 
+
+
+<ul>
+
+        {% for zodiac  in zodiac_list%}
+<li>
+     {{zodiac}}      
+    </li>
+     {% endfor %}
+
+     {% for haoma  in haoma_list %}
+     <li>
+                {%   for hao in haoma %}
+           {{hao}}      
+         </li>
+          {% endfor %}
+          {% endfor %}
+</ul>   -->

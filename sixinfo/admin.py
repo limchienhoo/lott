@@ -12,13 +12,6 @@ class HaomaAdmin(admin.ModelAdmin):
             ('head','tail','comp')
             )
 
-    # def to_dict(self):
-
-# @admin.register(Nlzodiac)
-# class NlzodiacAdmin(admin.ModelAdmin):
-#     list_display = ('nl_year' , 's_datetime','e_datetime','sys_zodiac')
-#     fields = ('nl_year' , 's_datetime','e_datetime','sys_zodiac')
-
 
 @admin.register(Zodiac)
 class ZodiacAdmin(admin.ModelAdmin):

@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from pick.views import pick_haoma
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',pick_haoma),
 ]

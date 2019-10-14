@@ -54,6 +54,7 @@ class Zodiac(models.Model):
     season = models.CharField(max_length=12,choices=SEASON_CHOIES,verbose_name="春夏秋冬肖")
     z_five_element = models.CharField(max_length=10,choices=Z_ELEMENT_CHOIES,verbose_name="五行肖")
     z_order = models.PositiveIntegerField(default=0,verbose_name="生肖序号")
+    be_pick = models.BooleanField(default=False,verbose_name="是否被選")
 
     
     def __str__(self):
@@ -186,25 +187,25 @@ class Haoma(models.Model):
     tail = models.CharField(max_length=10,choices=TAIL_CHOIES,verbose_name="号码尾")
     comp = models.CharField(max_length=10,choices=COMP_CHOIES,verbose_name="号码尾")
     zodiacs = models.ForeignKey(Zodiac,verbose_name="所属生肖",on_delete=None)
+    be_pick = models.BooleanField(default=False,verbose_name="是否被選")
     
 
-    @staticmethod
-    def get_all_haoma(cls):
-        queryset = cls.objects.all()
-        return queryset
+    # @staticmethod
+    # def get_be_pick(self,five_element,boo,s_or_d,head,tail,comp,zodiacs):
+    #      zodiac_ids = []
+    #      haoma_ids = []
+    #      if zodiacs
+
+
+        # return zodiac_ids,haoma_ids
 
     # @staticmethod
     # def get_five_element(self,five_element):
-    #     try:
+    #     if five_element:
     #         pick_haoma = self.objects.filter(five_element=five_element)
+    #     else: 
 
-    #     pick_haoma = []
-
-        # return pick_haoma 
-
-
-
-
+    #     # return pick_haoma 
 
     def __str__(self):
          return self.name
@@ -215,20 +216,4 @@ class Haoma(models.Model):
 
 
 
-# class Nlzodiac(models.Model):
 
-#     nl_year= models.CharField(max_length=10,  verbose_name="农历年份")
-#     s_datetime = models.DateField(verbose_name="开始日期")
-#     e_datetime = models.DateField(verbose_name="结束日期")
-#     # the_zodiac = models.ForeignKey(Zodiac,verbose_name="农历年的生肖",on_delete=models.CASCADE)
-#     sys_zodiac = models.ForeignKey(Zodiac,verbose_name="当前系统生肖年",on_delete=None)
-#     is_sys_zodiac = models.BooleanField(default=False,verbose_name="是否当天生肖") 
-
-
-    # def __str__(self):
-    #     return self.name
-
-    # class Meta:
-    #     managed = True
-    #     verbose_name = verbose_name_plural = "农历生肖"
-    
