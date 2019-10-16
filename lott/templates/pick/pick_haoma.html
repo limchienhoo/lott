@@ -1,0 +1,134 @@
+
+
+<ul>
+{% for zodiacs,haomas in haoma_dict.items %}
+       <li> 
+                {{zodiacs}}  
+                {% for haoma in haomas %}
+                {% if haoma.be_pick == True %}
+                {% if haoma.boo == "RED_D" or haoma.boo == "RED_S" %}
+                 <font size="4" color="red">{{haoma}} </font>                 
+                 {% endif %}
+                {% if haoma.boo == "GREEN_D" or haoma.boo == "GREEN_S" %}
+                 <font size="4" color="green">{{haoma}} </font>                 
+                 {% endif %}
+                {% if haoma.boo == "BLUE_D" or haoma.boo == "BLUE_S" %}
+                 <font size="4" color="blue">{{haoma}} </font>               
+                   {% endif %}
+                 {% else %}
+                <font color="#999999">{{haoma}}</font>  
+                 {% endif %}
+                {% endfor %}
+            </li>
+        {% endfor %}
+</ul>
+
+<ul> 
+<form name='select_haoma' action='/' method='GET'>
+<lable for='zodiac'>生肖：</lable><br>
+
+<input type='checkbox' name='zo_zo' value='鼠'>鼠
+<input type='checkbox' name='zo_zo' value='牛'>牛
+<input type='checkbox' name='zo_zo' value='虎'>虎
+<input type='checkbox' name='zo_zo' value='兔'>兔
+<input type='checkbox' name='zo_zo' value='龙'>龙
+<input type='checkbox' name='zo_zo' value='蛇'>蛇
+<input type='checkbox' name='zo_zo' value='马'>马
+<input type='checkbox' name='zo_zo' value='羊'>羊
+<input type='checkbox' name='zo_zo' value='猴'>猴
+<input type='checkbox' name='zo_zo' value='鸡'>鸡
+<input type='checkbox' name='zo_zo' value='狗'>狗
+<input type='checkbox' name='zo_zo' value='猪'>猪<br>
+
+<input type='radio' name='zo_sex' value=True>男肖
+<input type='radio' name='zo_sex' value=False>女肖
+
+<input type='radio' name='zo_home' value=True>家肖
+<input type='radio' name='zo_home' value=False>野肖
+
+<input type='radio' name='zo_heaven' value=True>天肖
+<input type='radio' name='zo_heaven' value=False>天肖
+
+<input type='radio' name='zo_nature' value=True>阳肖
+<input type='radio' name='zo_nature' value=False>陰肖<br>
+
+<input type='radio' name='ma_sord' value=1>單數
+<input type='radio' name='ma_sord' value=2>雙數
+
+<input type='checkbox' name='ma_boo' value='RED_S'>紅單
+<input type='checkbox' name='ma_boo' value='RED_D'>紅雙
+<input type='checkbox' name='ma_boo' value='BLUE_S'>藍單
+<input type='checkbox' name='ma_boo' value='BLUE_D'>藍雙
+<input type='checkbox' name='ma_boo' value='GREEN_S'>綠單
+<input type='checkbox' name='ma_boo' value='GREEN_D'>綠雙
+<br>
+
+<input type='checkbox' name='ma_head' value='HEAD_0'>0頭
+<input type='checkbox' name='ma_head' value='HEAD_1'>1頭
+<input type='checkbox' name='ma_head' value='HEAD_2'>2頭
+<input type='checkbox' name='ma_head' value='HEAD_3'>3頭
+<input type='checkbox' name='ma_head' value='HEAD_4'>4頭<br>
+
+<input type='checkbox' name='ma_tail' value='TAIL_0'>0尾
+<input type='checkbox' name='ma_tail' value='TAIL_1'>1尾
+<input type='checkbox' name='ma_tail' value='TAIL_2'>2尾
+<input type='checkbox' name='ma_tail' value='TAIL_3'>3尾
+<input type='checkbox' name='ma_tail' value='TAIL_4'>4尾
+<input type='checkbox' name='ma_tail' value='TAIL_0'>5尾
+<input type='checkbox' name='ma_tail' value='TAIL_1'>6尾
+<input type='checkbox' name='ma_tail' value='TAIL_2'>7尾
+<input type='checkbox' name='ma_tail' value='TAIL_3'>8尾
+<input type='checkbox' name='ma_tail' value='TAIL_4'>9尾<br>
+<input type='checkbox' name='ma_comp' value='COMP_1'>合1
+<input type='checkbox' name='ma_comp' value='COMP_2'>合2
+<input type='checkbox' name='ma_comp' value='COMP_3'>合3
+<input type='checkbox' name='ma_comp' value='COMP_4'>合4
+<input type='checkbox' name='ma_comp' value='COMP_5'>合5
+<input type='checkbox' name='ma_comp' value='COMP_6'>合6
+<input type='checkbox' name='ma_comp' value='COMP_7'>合7
+<input type='checkbox' name='ma_comp' value='COMP_8'>合8
+<input type='checkbox' name='ma_comp' value='COMP_9'>合9
+<input type='checkbox' name='ma_comp' value='COMP_10'>合10
+<input type='checkbox' name='ma_comp' value='COMP_11'>合11
+<input type='checkbox' name='ma_comp' value='COMP_12'>合12
+<input type='checkbox' name='ma_comp' value='COMP_13'>合13<br>
+
+
+<input type='checkbox' name='zo_qqsh' value='QING'>琴肖
+<input type='checkbox' name='zo_qqsh' value='QI'>棋肖
+<input type='checkbox' name='zo_qqsh' value='SHU'>书肖
+<input type='checkbox' name='zo_qqsh' value='HUA'>画肖<br>
+
+<input type='checkbox' name='zo_season' value='SPRING'>春肖/东肖/风肖
+<input type='checkbox' name='zo_season' value='AUTUMN'>夏肖/西肖/雷肖
+<input type='checkbox' name='zo_season' value='SUMMER'>秋肖/南肖/云肖
+<input type='checkbox' name='zo_season' value='WINTER'>冬肖/北肖/雨肖<br>
+
+<input type='checkbox' name='zo_element' value='Z_METAL'>金肖
+<input type='checkbox' name='zo_element' value='Z_WOOD'>木肖
+<input type='checkbox' name='zo_element' value='Z_WATER'>水肖
+<input type='checkbox' name='zo_element' value='Z_FIRE'>火肖
+<input type='checkbox' name='zo_element' value='Z_EARTH'>土肖<br>
+
+
+
+<input type='checkbox' name='ma_element' value='METAL'>金行
+<input type='checkbox' name='ma_element' value='WOOD'>木行
+<input type='checkbox' name='ma_element' value='WATAR'>水行
+<input type='checkbox' name='ma_element' value='FIRE'>火行
+<input type='checkbox' name='ma_element' value='EARTH'>土行<br>
+
+<input type='submit' value='提交'>
+</form>
+
+</ul>
+
+<ul>
+
+    {% comment %} list_main_ids:{{list_main_ids}}<br>
+     list_qqsh_ids:{{list_qqsh_ids}}<br>
+        list_season_ids:{{list_season_ids}}<br>
+        list_element_ids:{{list_element_ids}}<br>
+      list_ids:{{list_ids}}<br> {% endcomment %}
+
+</ul>

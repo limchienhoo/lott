@@ -16,8 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from pick.views import pick_haoma
+from django.conf.urls import url
+# from mytest.views import  video
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',pick_haoma),
+    #  url('^video-(?P<classification_id>\d+)-(?P<level_id>\d+)-(?P<status>\d+).html/$', views.video),
+    # url('^video2-(?P<direction_id>\d+)-(?P<classification_id>\d+)-(?P<level_id>\d+).html/$', views.video2),
 ]
