@@ -12,16 +12,18 @@ Class-based views
 Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
+"""  
 from django.contrib import admin
 from django.urls import path
 from pick.views import pick_haoma
 from django.conf.urls import url
-# from mytest.views import  video
+from sysinfo.views import homepage
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',pick_haoma),
+    path('',homepage),
+    path('pick',pick_haoma),
     #  url('^video-(?P<classification_id>\d+)-(?P<level_id>\d+)-(?P<status>\d+).html/$', views.video),
     # url('^video2-(?P<direction_id>\d+)-(?P<classification_id>\d+)-(?P<level_id>\d+).html/$', views.video2),
 ]

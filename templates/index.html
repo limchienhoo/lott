@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %} 六合交易平臺主頁{% endblock %}
+{% block headmessage %} 
+<h3>主頁內容<h3>
+{% endblock %}
+{% block content %} 
+<div class="container main">
+<div class="row">
+{% for zodiac in zodiacs %}
+{{zodiac}}
+  {% for haoma in  haomas %}
+  {% if haoma.zodiacs == zodiac %}
+  {{haoma.name}}
+  {% endif %}
+  {% endfor %}
+    <br>
+    </div>
+    </div>
+{% endfor %}
+{% endblock %}

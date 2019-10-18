@@ -5,8 +5,6 @@ from sixinfo.models import Haoma,Zodiac
 from pick import models
 
 
-
-
 def get_list_main_ids(request,template,all_zodiacs,all_haomas):
 
     list_main_ids = []
@@ -213,7 +211,7 @@ def pick_haoma(request):
     for zodiac in zodiacs_list:
         haomas = []
         haoma_list2=[]
-        haomas=zodiac.haoma_set.filter(zodiacs=zodiac)
+        haomas=zodiac.haoma_set.filter(zodiacs=zodiac).order_by('id')
         for haoma in haomas:
             if haoma.id in list_ids:
                 haoma.be_pick = True
